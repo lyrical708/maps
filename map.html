@@ -1,0 +1,94 @@
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Region Map</title>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=‚²Ž©g‚ÌAPIƒL[‚ðÝ’è‚µ‚Ä‰º‚³‚¢">
+    </script>
+    <script type="text/javascript">
+  function initialize() {
+    var latlng = new google.maps.LatLng(35.142980, 136.899310);
+    var opts = {
+      zoom: 11,
+      draggable: true,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"), opts);
+    var array = [
+       new google.maps.LatLng(35.0915536,137.0007444)
+      ,new google.maps.LatLng(35.0843898,136.9440301)
+      ,new google.maps.LatLng(35.1276648,136.9858478)
+      ,new google.maps.LatLng(35.1211912,136.9643819)
+      ];
+    for (i = 0; i < array.length; i++) {
+      var myMarker = new google.maps.Marker({
+                position: array[i],
+                icon:'icon/1.png',
+                map: map
+              });
+    }
+    var array = [
+       new google.maps.LatLng(35.1967021,136.8947435)
+      ,new google.maps.LatLng(35.1708425,136.9149613)
+      ,new google.maps.LatLng(35.1905189,136.9445036)
+      ,new google.maps.LatLng(35.2069246,136.9234566)
+      ,new google.maps.LatLng(35.1713907,136.9352705)
+      ,new google.maps.LatLng(35.1466418,136.9466258)
+      ];
+    for (i = 0; i < array.length; i++) {
+      var myMarker = new google.maps.Marker({
+                position: array[i],
+                icon:'icon/2.png',
+                map: map
+              });
+    }
+    var array = [
+       new google.maps.LatLng(35.1816185,136.8776422)
+      ,new google.maps.LatLng(35.1543024,136.8535574)
+      ,new google.maps.LatLng(35.1424016,136.8715821)
+      ,new google.maps.LatLng(35.1577722,136.8145743)
+      ,new google.maps.LatLng(35.1131953,136.8138199)
+      ];
+    for (i = 0; i < array.length; i++) {
+      var myMarker = new google.maps.Marker({
+                position: array[i],
+                icon:'icon/3.png',
+                map: map
+              });
+    }
+    var array = [
+       new google.maps.LatLng(35.2083267,137.0047938)
+      ,new google.maps.LatLng(35.1605467,137.005377)
+      ];
+    for (i = 0; i < array.length; i++) {
+      var myMarker = new google.maps.Marker({
+                position: array[i],
+                icon:'icon/4.png',
+                map: map
+              });
+    }
+    var array = [
+       new google.maps.LatLng(35.1551163,136.8929473)
+      ,new google.maps.LatLng(35.1019144,136.8709216)
+      ,new google.maps.LatLng(35.1361189,136.9003053)
+      ,new google.maps.LatLng(35.0847642,136.9132861)
+      ,new google.maps.LatLng(35.1315863,136.9187189)
+      ];
+    for (i = 0; i < array.length; i++) {
+      var myMarker = new google.maps.Marker({
+                position: array[i],
+                icon:'icon/5.png',
+                map: map
+              });
+    }
+  }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <p></p>
+    <div id="map_canvas" style="width:600px; height:400px"></div>
+  </body>
+</html>
